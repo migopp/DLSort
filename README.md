@@ -5,12 +5,12 @@ DLSort is a simple, Python-based file sorting script. I built it to automate the
 DLSort simply watches a given source directory for modifications, then uses an event handler to move newly-added files into predetermined directories based on their file extensions (or name contents, if you choose to adapt the "classes" feature).
 
 ## What's included here?
-Inside the "Application" folder, there is DLSort (a Unix executable file, which is useless to you) and main.py (the Python script). DLSort runs in the shell, utilizing watchdog to detect changes in the source directory. It's indended to be an efficient script running in the background, launching upon start up. I will detail how to set it up on your machine in the following section.
+Inside the "Application" folder, there is DLSort (a Unix Executable File, which is useless to you) and main.py (the Python script). DLSort runs in the shell, utilizing watchdog to detect changes in the source directory. It's indended to be an efficient script running in the background, launching upon start up. I will detail how to set it up on your machine in the following section.
 
 ## How do I set it up on my machine?
 I'll be catering these instructions toward macOS, because that is the operating system most familiar to me. It can also be used on other operating systems with some tweaking.
 
-After downloading main.py, you'll need to edit some details within the script and create a new Unix executable file (the one in this repository is useless to you for reasons that I'll later explain).
+After downloading main.py, you'll need to edit some details within the script and create a new Unix Executable File (the one in this repository is useless to you for reasons that I'll later explain).
 
 ### main.py
 The section of code commented as "set up user data" will contain most of the necessary alterations within the Python script. I've pasted the section below:
@@ -65,7 +65,7 @@ if (is_class(entry)):
             f"Moved school file {entry} to /Users/{user}/Documents/School/Other/{splitted[1]}")
 ```
 
-### DLSort Unix executable
+### DLSort Unix Executable
 This is a very simple file, it simply tells the terminal to run the Python script for DLSort at a designated file location. The one here likely not work for you (unless your machine is set up exactly the same as mine—same user and all). You'll need to create an extensionless file (the name is arbitrary) and write the following command:
 ```
 #!/bin/sh
@@ -75,13 +75,13 @@ Then, in the terminal, give the following command:
 ```
 chmod 755 [insert the file path to the extensionless file that you just created]
 ```
-After which, the extensionless file should turn into a Unix executable, that—when run—will trigger the Python script (main.py).
+After which, the extensionless file should turn into a Unix Executable, that—when run—will trigger the Python script (main.py).
 
 ### Running DLSort on boot
-As is, you will need to manually launch the Unix executable every time that you want access to DLSort's capabilities. For some, this is desirable; however, there is a way to run the script on boot. Here I will detail how to do that, if that interests you.
+As is, you will need to manually launch the Unix Executable every time that you want access to DLSort's capabilities. For some, this is desirable; however, there is a way to run the script on boot. Here I will detail how to do that, if that interests you.
 
 Go to your Mac's system settings, and search for "Login Items." I've attatched a screenshot from my machine (macOS Ventura 13.4.1) below:
 
 <img width="708" alt="Screenshot 2023-07-25 at 12 44 10 AM" src="https://github.com/migopp/DLSort/assets/128272843/0c2ce9dd-a6ed-454d-ac4b-9a80a5ffdd06">
 
-Then, you will need to add a login item using the "+" symbol. Find the file path to your Unix executable, and then select it and confirm. After that point, you're done, and all you need to do is restart your machine.
+Then, you will need to add a login item using the "+" symbol. Find the file path to your Unix Executable, and then select it and confirm. After that point, you're done, and all you need to do is restart your machine.
