@@ -5,7 +5,7 @@ DLSort is a simple, Python-based file sorting script. I built it to automate the
 DLSort simply watches a given source directory for modifications, then uses an event handler to move newly-added files into predetermined directories based on their file extensions (or name contents, if you choose to adapt the "classes" feature).
 
 ## What's included here?
-Inside this repository, you'll find DLSort.py. DLSort is a Python script that's intended to run in the shell, utilizing watchdog to detect changes in the source directory. It's indended to be an efficient script running in the background, launching upon start up. I will detail one way to set it up on your machine in the following section.
+Inside this repository, you'll find DLSort.py and requirements.txt. DLSort is a Python script that's intended to run in the shell, utilizing watchdog to detect changes in the source directory. It's indended to be an efficient script running in the background, launching upon start up. If you wish to use a virtual environment, utilize the requirements.txt file that I have included here. I will detail one way to set it up on your machine in the following section.
 
 ## How do I set it up on my machine?
 I'll be catering these instructions toward macOS, because that is the operating system most familiar to me. It can also be used on other operating systems with some tweaking.
