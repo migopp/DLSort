@@ -5,14 +5,14 @@ DLSort is a simple, Python-based file sorting script. I built it to automate the
 DLSort simply watches a given source directory for modifications, then uses an event handler to move newly-added files into predetermined directories based on their file extensions (or name contents, if you choose to adapt the "classes" feature).
 
 ## What's included here?
-Inside this repository, you'll find DLSort.py and requirements.txt. DLSort is a Python script that's intended to run in the shell, utilizing watchdog to detect changes in the source directory. It's indended to be an efficient script running in the background, launching upon start up. If you wish to use a virtual environment, utilize the requirements.txt file that I have included here. I will detail one way to set it up on your machine in the following section.
+Inside this repository, you'll find dl_sort.py and requirements.txt. DLSort is a Python script that's intended to run in the shell, utilizing watchdog to detect changes in the source directory. It's indended to be an efficient script running in the background, launching upon start up. If you wish to use a virtual environment, utilize the requirements.txt file that I have included here. I will detail one way to set it up on your machine in the following section.
 
 ## How do I set it up on my machine?
 I'll be catering these instructions toward macOS, because that is the operating system most familiar to me. It can also be used on other operating systems with some tweaking.
 
-After downloading DLSort.py, you'll need to edit some details within the script and create a new Unix Executable File for the shell to run DLSort.
+After downloading dl_sort.py, you'll need to edit some details within the script and create a new Unix Executable File for the shell to run DLSort.
 
-### DLSort.py
+### dl_sort.py
 The section of code commented as "set up user data" will contain most of the necessary alterations within the Python script. I've pasted the section below:
 ```python
 user = "migopp"
@@ -90,7 +90,7 @@ Then, in the terminal, give the following command:
 ```
 chmod 755 [insert the file path to the extensionless file that you just created]
 ```
-After which, the extensionless file should turn into a Unix Executable, that—when run—will trigger the Python script (DLSort.py).
+After which, the extensionless file should turn into a Unix Executable, that—when run—will trigger the Python script (dl_sort.py).
 
 You could also, just as easily, make a shell script by creating a file with the extension .sh; however, you will need to manually run it in the shell or configure it differently than I have here.
 
