@@ -87,7 +87,15 @@ if (is_class(entry)):
 This is a very simple file, it simply tells the shell to run the Python script for DLSort at a designated file location. I have not included one here, as it would (likely) not work for you at all (unless your machine happens to be set up exactly the same as mine—same user and all). You'll need to create an extensionless file (the name is arbitrary) and, within it, write the following commands:
 ```
 #!/bin/sh
-Python <insert the file path to the Python script here>
+Python <insert file path to the Python script name here>
+```
+In the case that you are using a venv, once you have that set up using the requirements.txt file provided, write this instead:
+```
+#!/bin/sh
+cd <insert the file path to the folder holding the Python script and venv>
+source venv/bin/activate
+Python <insert the Python script name here>
+deactivate
 ```
 Then, in the terminal, give the following command:
 ```
