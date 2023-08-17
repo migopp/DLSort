@@ -97,16 +97,10 @@ class AutomatedMovingHandler(FileSystemEventHandler):
             if (is_class(entry)):
                 name = os.path.splitext(entry)[0]
                 splitted = name.split("_")
-                if (splitted[0].upper() == "CS" or splitted[0].upper() == "M"):
-                    shutil.move(
-                        entry, f"/Users/{user}/Documents/School/{splitted[0].upper()}/{splitted[1]}")
-                    logging.info(
-                        f"Moved school file {entry} to /Users/{user}/Documents/School/{splitted[0].upper()}/{splitted[1]}")
-                else:
-                    shutil.move(
-                        entry, f"/Users/{user}/Documents/School/Other/{splitted[1]}")
-                    logging.info(
-                        f"Moved school file {entry} to /Users/{user}/Documents/School/Other/{splitted[1]}")
+                shutil.move(
+                    entry, f"/Users/{user}/Documents/School/{splitted[0].upper()}/{splitted[1]}")
+                logging.info(
+                    f"Moved school file {entry} to /Users/{user}/Documents/School/{splitted[0].upper()}/{splitted[1]}")
             elif (is_audio(entry)):
                 shutil.move(entry, audio_dir)
                 logging.info(f"Moved audio file {entry} to {audio_dir}")
