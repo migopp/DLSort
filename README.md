@@ -1,5 +1,8 @@
-# DLSort 1.0
+# DLSort 1.1
 DLSort is a simple, Python-based file sorting script. I built it to automate the file organization on my machine running macOS—because why not have a computer do the work for you?
+
+## v1.1 changes:
+Removed functionality for 'Other' classes, instead allowing for individual creation within the 'School' folder.
 
 ## How does DLSort work?
 DLSort simply watches a given source directory for modifications, then uses an event handler to move newly-added files into predetermined directories based on their file extensions (or name contents, if you choose to adapt the "classes" feature).
